@@ -34,6 +34,7 @@
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sanity": "^0.10.0",
     "@nuxtjs/sitemap": "^2.4.0",
+    "@nuxtjs/vercel-builder": "^0.24.0",
     "@sanity/client": "^2.23.1",
     "@sanity/image-url": "^1.0.1",
     "@tiptap/pm": "^2.0.0-beta.216",
