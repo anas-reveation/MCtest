@@ -23,10 +23,7 @@ export default {
       },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
-      {
-        name: 'google-signin-client_id',
-        content: process.env.GOOGLE_CLIENT_ID,
-      },
+
       { name: 'google-signin-scope', content: 'profile email openid' },
     ],
     script: [
@@ -44,23 +41,11 @@ export default {
     ],
   },
 
-  env: {
-    FACEBOOK_APP_ID: process.env.FACEBOOK_APP_ID,
-  },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [{ src: '~/assets/css/mybootstrap.scss', lang: 'sass' }],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    { src: '~/plugins/amplify.js' },
-    { src: '~/plugins/auth.js', mode: 'client' },
-    { src: '~/plugins/vue-carousel.js', mode: 'client' },
-    { src: '~/plugins/getLocalData.js', mode: 'client' },
-    { src: '~/plugins/vue-apexcharts.js', mode: 'client' },
-    { src: '~/plugins/deepLink.js', mode: 'client' },
-    { src: '~/plugins/aos.js', mode: 'client' },
-    { src: '~/plugins/sanity-image-builder.js', mode: 'client' },
     // { src: '~/plugins/redirectBlog.js', mode: 'client' },
   ],
 
@@ -68,22 +53,18 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    ['@nuxtjs/sanity/module', '@nuxtjs/dotenv', { filename: `.env.${process.env.NODE_ENV}` }],
-  ],
+  buildModules: [],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'vue-sweetalert2/nuxt',
-    ['@nuxtjs/dotenv', { filename: `.env.${process.env.NODE_ENV}` }],
     ['@nuxtjs/sitemap'],
     // ['@nuxtjs/sitemap', { exclude: ['/TermsOfServices'] }],
   ],
 
   sitemap: {
-    hostname: `https://${process.env.DOMAIN}`,
     routes: [
       '/mock-test/az-400-devops-engineer-expert-exam',
       '/mock-test/cloud-engineer-exam',
