@@ -106,6 +106,8 @@ export default {
     fallback: true,
   },
 
+  serverMiddleware: ['~/api/index.js'],
+
   // render: {
   //   static: {
   //     setHeaders: (resp, path) => {
